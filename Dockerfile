@@ -5,7 +5,7 @@ FROM tomcat:9.0.83-jdk17
 RUN rm -rf /usr/local/tomcat/webapps/*
 
 # Copy the WAR file built by Maven (rename to ROOT.war so it runs at "/")
-COPY target/*.war /usr/local/tomcat/webapps/
+COPY target/*.war /usr/local/tomcat/webapps/ROOT.war
 
 # Expose Tomcat port
 EXPOSE 8080
